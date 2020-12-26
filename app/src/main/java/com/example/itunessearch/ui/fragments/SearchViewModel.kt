@@ -17,7 +17,7 @@ class SearchViewModel (
 }*/
     val songs: MutableLiveData<Resource<SearchResponse>> = MutableLiveData()
     fun searchITunes(searchQuery: String) = viewModelScope.launch {
-        //viewModelScope makes sure that this corountine stays alive as long as our viewModel is alive
+        //viewModelScope makes sure that this coroutine stays alive as long as our viewModel is alive
         songs.postValue(Resource.Loading())
         val response=searchRepository.searchITune(searchQuery)
         songs.postValue(handleSongResponse(response))

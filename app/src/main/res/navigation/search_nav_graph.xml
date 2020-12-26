@@ -35,5 +35,11 @@
         android:id="@+id/songDescFragment"
         android:name="com.example.itunessearch.ui.fragments.SongDescFragment"
         android:label="fragment_song_desc"
-        tools:layout="@layout/fragment_song_desc" />
+        tools:layout="@layout/fragment_song_desc" >
+        <argument
+            android:name="song"
+            app:argType="com.example.itunessearch.models.Result"
+            android:defaultValue="@null"
+            app:nullable="true"/>
+    </fragment>
 </navigation>
